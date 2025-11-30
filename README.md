@@ -41,12 +41,12 @@ The core service definition:
 ```proto
 service KeyStore {
   rpc Set(KeyValue) returns (Status);
-  rpc Get(Key) returns (Value);
+  rpc Get(Key) returns (ResponseVal);
   rpc Delete(Key) returns (Status);
 
   rpc LPush(ListInsert) returns (Status);
   rpc LRange(ListRange) returns (ListValues);
-  rpc LPop(Key) returns (Value);
+  rpc LPop(Key) returns (ResponseVal);
 }
 ```
 
@@ -254,6 +254,7 @@ Contributions are welcome!
 # 📄 License
 
 MIT — free to use, learn, and modify.
+
 
 
 
