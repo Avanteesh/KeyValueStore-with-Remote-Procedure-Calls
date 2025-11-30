@@ -1,5 +1,7 @@
 # 📦 A KeyValueStore that uses Remote Procedure Calls instead of traditional HTTP.
 
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/grpc/grpc-original.svg" height="250" />
+
 A minimal distributed **Key–Value Store** implemented using **gRPC**.  
 Supports basic Redis-like operations — `SET`, `GET`, `DELETE`, list operations (`LPUSH`, `LRANGE`, `LPOP`) — exposed as **RPC methods**.
 
@@ -252,4 +254,5 @@ Contributions are welcome!
 # 📄 License
 
 MIT — free to use, learn, and modify.
+
 
