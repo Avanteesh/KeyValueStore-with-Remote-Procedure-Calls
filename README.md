@@ -1,4 +1,4 @@
-# 📦 KeyValueStore-with-Remote-Procedure-Calls
+# 📦 A KeyValueStore that uses Remote Procedure Calls instead of traditional HTTP.
 
 A minimal distributed **Key–Value Store** implemented using **gRPC**.  
 Supports basic Redis-like operations — `SET`, `GET`, `DELETE`, list operations (`LPUSH`, `LRANGE`, `LPOP`) — exposed as **RPC methods**.
@@ -252,3 +252,4 @@ Contributions are welcome!
 # 📄 License
 
 MIT — free to use, learn, and modify.
+
