@@ -1,7 +1,6 @@
 import grpc, logging
 from concurrent import futures
-import schema_pb2
-import schema_pb2_grpc
+from proto import schema_pb2, schema_pb2_grpc
 
 db_store = {}
 
