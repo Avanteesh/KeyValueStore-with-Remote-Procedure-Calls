@@ -208,20 +208,6 @@ gRPC gives:
 
 ---
 
-# 🛤️ Roadmap
-
-Suggested future improvements:
-
-- [ ] Persistent RDB-style snapshotting
-- [ ] TTL / expiry support
-- [ ] Authentication
-- [ ] Streaming list iteration
-- [ ] Multiple databases (DB index)
-- [ ] Load balancing across nodes
-- [ ] Real benchmarks (Locust)
-
----
-
 # 🤝 Contributing
 
 Contributions are welcome!
@@ -235,6 +221,7 @@ Contributions are welcome!
 # 📄 License
 
 MIT — free to use, learn, and modify.
+
 
 
 
