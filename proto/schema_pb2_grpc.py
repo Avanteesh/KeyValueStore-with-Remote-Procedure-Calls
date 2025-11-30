@@ -3,7 +3,7 @@
 import grpc
 import warnings
 
-import schema_pb2 as schema__pb2
+import proto.schema_pb2 as schema__pb2
 
 GRPC_GENERATED_VERSION = '1.76.0'
 GRPC_VERSION = grpc.__version__
