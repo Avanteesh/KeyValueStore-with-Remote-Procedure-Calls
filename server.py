@@ -1,8 +1,12 @@
-import grpc, logging
+import sys
+import grpc
+import logging
 from concurrent import futures
 from proto import schema_pb2, schema_pb2_grpc
+from utils.database_file_manager import writeRDB, readRDB
 
 db_store = {}
+HOST, PORT = "127.0.0.1","50051"
 
 class KeyStoreService(schema_pb2_grpc.KeyStore):
     def Set(self, keyvalue: schema_pb2.KeyValue, context):
@@ -51,18 +55,20 @@ class KeyStoreService(schema_pb2_grpc.KeyStore):
         )
 
 def serve():
-    port = "50051"
+    readRDB(db_store, HOST, PORT)
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=20))
     schema_pb2_grpc.add_KeyStoreServicer_to_server(KeyStoreService(), server)
-    server.add_insecure_port(f"[::]:{port}")
+    server.add_insecure_port(f"{HOST}:{PORT}")
     server.start()
-    print(f"Server started in port {port}")
+    print(f"Server started in port {PORT}")
     server.wait_for_termination()
 
 
 if __name__ == "__main__":
     logging.basicConfig()
     serve()
+    writeRDB(db_store, HOST, PORT)
+
 
 
 
