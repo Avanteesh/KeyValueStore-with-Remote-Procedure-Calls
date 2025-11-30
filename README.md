@@ -78,14 +78,6 @@ source .venv/bin/activate
 
 ### 2️⃣ Install dependencies
 
-If using `requirements.txt`:
-
-```bash
-uv pip install -r requirements.txt
-```
-
-If using `pyproject.toml`:
-
 ```bash
 uv pip install .
 ```
@@ -97,12 +89,10 @@ uv pip install .
 > Only required if modifying `.proto` files.
 
 ```bash
-python -m grpc_tools.protoc \
-  -I proto \
-  --python_out=. \
-  --grpc_python_out=. \
-  proto/mini_redis.proto
+./update_protobuf.sh  # on linux
 ```
+
+- if on windows, copy paste the command in your powershell
 
 This produces:
 
@@ -254,6 +244,7 @@ Contributions are welcome!
 # 📄 License
 
 MIT — free to use, learn, and modify.
+
 
 
 
