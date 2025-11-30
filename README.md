@@ -96,15 +96,15 @@ uv pip install .
 
 This produces:
 
-- `mini_redis_pb2.py` (message types)
-- `mini_redis_pb2_grpc.py` (service stubs)
+- `schema_pb2.py` (message types)
+- `schema_pb2_grpc.py` (service stubs)
 
 ---
 
 # ▶️ Running The Server
 
 ```bash
-python server/main.py
+python server.py
 ```
 
 Output example:
@@ -118,7 +118,7 @@ Server started on port 50051
 # 💻 Running the Client
 
 ```bash
-python client/main.py
+python client.py
 ```
 
 You’ll be prompted for input or you can call operations through API-style scripts.
@@ -126,14 +126,6 @@ You’ll be prompted for input or you can call operations through API-style scri
 ---
 
 # 🧪 Tests
-
-This project includes **multi-client tests** for concurrency and correctness.
-
-Run:
-
-```bash
-python tests/test_remote.py
-```
 
 Tests include scenarios such as:
 
@@ -244,6 +236,7 @@ Contributions are welcome!
 # 📄 License
 
 MIT — free to use, learn, and modify.
+
 
 
 
