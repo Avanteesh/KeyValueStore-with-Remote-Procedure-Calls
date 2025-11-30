@@ -24,10 +24,9 @@ Supports basic Redis-like operations — `SET`, `GET`, `DELETE`, list operations
 
 ```
 KeyValueStore-with-Remote-Procedure-Calls/
-├── server/          # gRPC server implementation
+├── server.py
 ├── client/          # gRPC client interface
 ├── proto/           # .proto schema
-├── tests/           # multithread + integration tests
 ├── README.md
 └── pyproject.toml / requirements.txt
 ```
@@ -96,8 +95,8 @@ uv pip install .
 
 This produces:
 
-- `schema_pb2.py` (message types)
-- `schema_pb2_grpc.py` (service stubs)
+- `./proto/schema_pb2.py` (message types)
+- `./proto/schema_pb2_grpc.py` (service stubs)
 
 ---
 
@@ -118,7 +117,7 @@ Server started on port 50051
 # 💻 Running the Client
 
 ```bash
-python client.py
+python client/client.py
 ```
 
 You’ll be prompted for input or you can call operations through API-style scripts.
@@ -236,6 +235,7 @@ Contributions are welcome!
 # 📄 License
 
 MIT — free to use, learn, and modify.
+
 
 
 
